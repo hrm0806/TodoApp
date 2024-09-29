@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "src/styles/globals.css";
-
 import classes from "./layout.module.scss";
-import HeaderIconButton from "@/components/headerIconButton";
+import AppBar from "@/components/AppBar";
+import TodoIcon from "@/components/TodoIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,18 +20,31 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={classes.backgroundColor}>
-        <header className={classes.AppBar}>
-          <div className={classes.LeftSide}>
-            <HeaderIconButton />
-            <div className={classes.Typography}>
-              <div className={classes.Title}>
-                <div className={classes.Text}>タスク管理アプリ</div>
-              </div>
+        <AppBar />
+        <div className={classes.sideBar}>
+          <div className={classes.ListItem}>
+            <div className={classes.Frame}>
+              <TodoIcon />
+            </div>
+            <div className={classes.ListItemText}>
+              <div className={classes.Todo}>TODO</div>
             </div>
           </div>
-        </header>
-        <div className={classes.sideBar}>さいどヴァー</div>
 
+          <div className={classes.ListItem}>
+            <div className={classes.Frame}>
+              <div className={classes.Icon}>
+                <div className={classes.Circle}></div>
+                <div className={classes.smallCircle}></div>
+                <div className={classes.body}></div>
+                <div className={classes.smallbody}></div>
+              </div>
+            </div>
+            <div className={classes.ListItemText}>
+              <div className={classes.Todo}>プロフィール</div>
+            </div>
+          </div>
+        </div>
         {children}
       </body>
     </html>

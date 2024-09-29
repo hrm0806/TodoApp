@@ -1,0 +1,33 @@
+.Icon {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  //Todoメニューのアイコン
+  .vector {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17px;
+    height: 9px;
+    top: 7.5px;
+    left: 3.5px;
+
+    .Line {
+      justify-content: space-between; //左右に配置
+      display: flex;
+      .circle {
+        width: 1.63px;
+        height: 1.62px;
+        border-radius: 50%;
+        background-color: #7e8a8c;
+      }
+      .line {
+        position: relative;
+        width: 13.18px;
+        height: 1.5px;
+        background-color: #7e8a8c;
+      }
+    }
+  }
+}

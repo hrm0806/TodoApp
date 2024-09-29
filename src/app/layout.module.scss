@@ -2,47 +2,89 @@
   background-color: #ebeded;
 }
 
-.AppBar {
-  background-color: #232526;
-  width: 1920px;
-  height: 64px;
-  padding: 8px 12px 8px 12px;
-  gap: 0;
-  opacity: 1;
+.sideBar {
+  position: absolute;
+  width: 256px;
+  height: 1016px;
+  top: 64px;
+  gap: 0px;
+  background: #ffffff;
+  box-shadow: -1px 0px 0px 0px #0000001f inset;
 }
 
-.LeftSide {
-  width: 1896px;
+.ListItem {
+  width: 256px;
   height: 48px;
-  gap: 16px;
-  opacity: 1px;
-}
+  padding: 8px 16px;
+  border: 0px 0px 1px 0px;
+  background-color: #1bb4b4;
+  display: flex;
+  align-items: center;
 
-.Typography {
-  width: 1832px;
-  height: 32px;
-  gap: 0px;
-  opacity: 1;
+  .Frame {
+    width: 55px;
+    height: 24px;
+    padding: 0px 31px 0px 0px;
+    background-color: #8c902d;
+    //プロフィールのアイコン
+    .Icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      background-color: #ffffff;
+      .Circle {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        top: 4.69px;
+        left: 8.5px;
+        border-radius: 50%;
+        background-color: #7e8a8c;
+      }
+      .smallCircle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 6.19px;
+        left: 10px;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
+      .body {
+        position: absolute;
+        width: 15px;
+        height: 6px;
+        top: 13.31px;
+        left: 4.5px;
+        gap: 0px;
+        opacity: 0px;
+        background-color: #7e8a8c;
+      }
+      .smallbody {
+        position: absolute;
+        width: 12px;
+        height: 3px;
+        top: 14.81px;
+        left: 6px;
+        background-color: #ffffff;
+      }
+    }
+  }
+  .ListItemText {
+    width: 169px;
+    height: 32px;
+    padding: 4px 0px;
+    background-color: #331436;
+    .Todo {
+      width: 169px;
+      height: 24px;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      text-align: left;
+      background-color: #23691b;
+    }
+  }
 }
-.Title {
-  width: 162px;
-  height: 32px;
-  gap: 0px;
-  opacity: 0px;
-}
-.Text {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: 0.15000000596046448px;
-  text-align: left;
-  color: #ffffff;
-}
-
-// .sideBar {
-//   background: #FFFFFF;
-//   height: 100%;
-//   width: 250px;
-//   position: fixed;
-// }

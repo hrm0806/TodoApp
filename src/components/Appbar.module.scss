@@ -1,0 +1,31 @@
+.AppBar {
+  background-color: #17c6ed;
+  width: 1920px;
+  height: 64px;
+  padding: 8px 12px;
+}
+.LeftSide {
+  display: flex;
+  align-items: center;
+  width: 1896px;
+  height: 48px;
+  gap: 16px;
+}
+.Typography {
+  width: 1832px;
+  height: 32px;
+}
+.Title {
+  width: 162px;
+  height: 32px;
+  margin: 0 auto; // center the text
+}
+.Text {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #ffffff;
+}
