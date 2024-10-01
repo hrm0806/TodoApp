@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "src/styles/globals.css";
 import classes from "./layout.module.scss";
-import AppBar from "@/components/AppBar";
-import TodoIcon from "@/components/TodoIcon";
+import { SideBar } from "@/components/organisms/SideBar";
+import AppBar from "@/components/organisms/AppBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,33 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={classes.backgroundColor}>
         <AppBar />
-        <div className={classes.sideBar}>
-          <div className={classes.ListItem}>
-            <div className={classes.Frame}>
-              <TodoIcon />
-            </div>
-            <div className={classes.ListItemText}>
-              <div className={classes.Todo}>TODO</div>
-            </div>
-          </div>
-
-          <div className={classes.ListItem}>
-            <div className={classes.Frame}>
-              <div className={classes.Icon}>
-                <div className={classes.Circle}></div>
-                <div className={classes.smallCircle}></div>
-                <div className={classes.body}></div>
-                <div className={classes.smallbody}></div>
-              </div>
-            </div>
-            <div className={classes.ListItemText}>
-              <div className={classes.Todo}>プロフィール</div>
-            </div>
-          </div>
-        </div>
+        <SideBar />
         {children}
       </body>
     </html>

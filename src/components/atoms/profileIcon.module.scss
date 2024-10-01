@@ -1,0 +1,42 @@
+.Icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  .Circle {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 4.69px;
+    left: 8.5px;
+    border-radius: 50%;
+    background-color: #7e8a8c;
+  }
+  .smallCircle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 6.19px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+  .body {
+    position: absolute;
+    width: 15px;
+    height: 6px;
+    top: 13.31px;
+    left: 4.5px;
+    border-radius: 60% 60% 0% 0%;
+    background-color: #7e8a8c;
+  }
+  .smallbody {
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    top: 14.81px;
+    left: 6px;
+    border-radius: 60% 60% 0% 0%;
+    background-color: #ffffff;
+  }
+}

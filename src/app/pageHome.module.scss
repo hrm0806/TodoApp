@@ -1,0 +1,156 @@
+//TODO一覧の表示ボックス
+.newcard {
+  width: 256px;
+  height: 61px;
+
+  .newbutton {
+  }
+}
+.BOX {
+  position: absolute;
+  display: block; //要素が縦に並ぶ
+  top: 100px;
+  left: 309px;
+  width: 1558px;
+  height: 859px;
+  .container {
+    width: 1558px;
+    height: 96px;
+    padding: 24px 0px;
+    gap: 24px;
+    .AppBar {
+      width: 1558px;
+      height: 48px;
+      padding: 8px 0px;
+      gap: 10px;
+      .title {
+        width: 1558px;
+        height: 32px;
+        gap: 8px;
+
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+        text-align: left;
+      }
+    }
+  }
+
+  .search {
+    width: 1558px;
+    height: 174px;
+    padding: 20px 20px 0px 20px;
+    gap: 16px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #0000001a;
+    background: #ffffff;
+    display: flex; //要素が横に並ぶ
+    flex-direction: column; //要素が縦に並ぶ
+    .searchtext {
+      width: 275px;
+      height: 37px;
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 0.15px;
+      text-align: left;
+    }
+    .searchbox {
+      width: 1516px;
+      height: 101px;
+      align-self: center;
+
+      .searchboxin {
+        top: 8px;
+        left: 15px;
+        bottom: 24px;
+        width: 1448px;
+        height: 85px;
+        padding: 8px 0px 24px 15px;
+
+        display: flex;
+        flex-direction: row;
+
+        .searchinputtext {
+          //検索ボックス
+          width: 942px;
+          height: 56px;
+          border-radius: 4px;
+          background-color: #f1f4fa;
+          padding: 0px 12px 0px 12px;
+          border: 1px solid #0000003b;
+        }
+
+        .buttongroup {
+          position: relative;
+          left: 30px;
+          top: 15px;
+          display: flex;
+          gap: 24px; // ボ
+          .searchbutton {
+            //検索ボタン
+            width: 90px;
+            height: 36px;
+            border-radius: 4px;
+            background-color: #17c6ed;
+            box-shadow: 0px 1px 5px 0px #0000001f;
+            box-shadow: 0px 2px 2px 0px #00000024;
+            box-shadow: 0px 3px 1px -2px #00000033;
+            padding: 6px 16px 6px 16px;
+            gap: 8px;
+            .searchbuttontext {
+              width: 58px;
+              height: 24px;
+              font-family: Roboto;
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0.4px;
+              text-align: center;
+              color: #ffffff;
+            }
+          }
+          .resetbutton {
+            //リセットボタン
+            width: 90px;
+            height: 36px;
+            border-radius: 4px;
+            background-color: #0000001f;
+            box-shadow: 0px 1px 5px 0px #0000001f;
+            box-shadow: 0px 2px 2px 0px #00000024;
+            box-shadow: 0px 3px 1px -2px #00000033;
+            padding: 6px 16px 6px 16px;
+            gap: 8px;
+            .resetbuttontext {
+              width: 58px;
+              height: 24px;
+              font-family: Roboto;
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0.4px;
+              text-align: center;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .space {
+    width: 1558px;
+    height: 73px;
+    padding: 24px 7px 0px 0px;
+    gap: 9px;
+  }
+  .frame {
+    width: 1558px;
+    height: 516px;
+    background-color: #2b9718;
+  }
+}
+
+//検索ボックス

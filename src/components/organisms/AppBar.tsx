@@ -1,5 +1,5 @@
+import HeaderIconButton from "../atoms/headerIconButton";
 import classes from "./Appbar.module.scss";
-import HeaderIconButton from "./headerIconButton";
 
 const AppBar = () => {
   return (
