@@ -1,17 +1,11 @@
+import { TitleContainer } from "@/components/molecules/TitleContainer";
 import styles from "./pageHome.module.scss";
 
 export default function Home() {
   return (
     <>
-      <div className={styles.newcard}>
-        <div className={styles.newbutton}></div>
-      </div>
       <div className={styles.BOX}>
-        <div className={styles.container}>
-          <div className={styles.AppBar}>
-            <div className={styles.title}>TODO一覧</div>
-          </div>
-        </div>
+        <TitleContainer title="TODO一覧" />
         <div className={styles.search}>
           <div className={styles.searchtext}>検索</div>
           <div className={styles.searchbox}>

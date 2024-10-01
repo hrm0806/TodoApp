@@ -1,4 +1,5 @@
-import HeaderIconButton from "../atoms/headerIconButton";
+import Link from "next/link";
+import HeaderIconButton from "../atoms/Icon/headerIconButton";
 import classes from "./Appbar.module.scss";
 
 const AppBar = () => {
@@ -8,7 +9,9 @@ const AppBar = () => {
         <HeaderIconButton />
         <div className={classes.Typography}>
           <div className={classes.Title}>
-            <div className={classes.Text}>タスク管理アプリ</div>
+            <Link href="/">
+              <div className={classes.Text}>タスク管理アプリ</div>
+            </Link>
           </div>
         </div>
       </div>

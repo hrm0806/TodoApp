@@ -1,11 +1,4 @@
 //TODO一覧の表示ボックス
-.newcard {
-  width: 256px;
-  height: 61px;
-
-  .newbutton {
-  }
-}
 .BOX {
   position: absolute;
   display: block; //要素が縦に並ぶ
@@ -13,31 +6,6 @@
   left: 309px;
   width: 1558px;
   height: 859px;
-  .container {
-    width: 1558px;
-    height: 96px;
-    padding: 24px 0px;
-    gap: 24px;
-    .AppBar {
-      width: 1558px;
-      height: 48px;
-      padding: 8px 0px;
-      gap: 10px;
-      .title {
-        width: 1558px;
-        height: 32px;
-        gap: 8px;
-
-        font-family: Roboto;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 32px;
-        letter-spacing: 0.15px;
-        text-align: left;
-      }
-    }
-  }
-
   .search {
     width: 1558px;
     height: 174px;
