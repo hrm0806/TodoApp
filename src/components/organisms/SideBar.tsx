@@ -8,21 +8,22 @@ export const SideBar = () => {
   return (
     <div className={classes.sideBar}>
       <div className={classes.divider}></div>
-      <button className={classes.ListItem}>
-        <div className={classes.Frame}>
-          <TodoIcon />
-        </div>
-        <div className={classes.ListItemText}>
-          <div className={classes.Name}>TODO</div>
-        </div>
-      </button>
+      <Link href="/">
+        <button className={classes.ListItem}>
+          <div className={classes.Frame}>
+            <TodoIcon />
+          </div>
+          <div className={classes.ListItemText}>
+            <div className={classes.Name}>TODO</div>
+          </div>
+        </button>
+      </Link>
 
       <Link href="/profile">
         <button className={classes.ListItem}>
           <div className={classes.Frame}>
             <ProfileIcon />
           </div>
-
           <div className={classes.ListItemText}>
             <div className={classes.Name}>プロフィール</div>
           </div>

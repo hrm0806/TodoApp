@@ -68,10 +68,19 @@
     padding: 24px 7px 0px 0px;
     gap: 9px;
   }
-  .frame {
+  .TaskListFrame {
     width: 1558px;
     height: 516px;
     background-color: #2b9718;
+    .TaskCard {
+      width: 1562px;
+      height: 139px;
+      padding: 13px 20px 13px 20px;
+      gap: 11px;
+      border: 0px 0px 1px 0px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
   }
 }
 

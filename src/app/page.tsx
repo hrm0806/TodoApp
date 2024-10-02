@@ -2,8 +2,11 @@ import { TitleContainer } from "@/components/molecules/TitleContainer";
 import styles from "./pageHome.module.scss";
 import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
+import { getAllTasks } from "@/TaskAPI";
 
-export default function Home() {
+export default async function Home() {
+  const tasks = await getAllTasks();
+
   return (
     <>
       <div className={styles.BOX}>
@@ -21,7 +24,15 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.space}></div>
-        <div className={styles.frame}></div>
+        <div className={styles.TaskListFrame}>
+          {tasks.map((task) => (
+            <div className={styles.TaskCard} key={task.title}>
+              {task.title}
+              {task.content}
+              {task.createdAt}
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

@@ -1,0 +1,24 @@
+.BOX {
+  position: absolute;
+  width: 1558px;
+  height: 682px;
+  top: 100px;
+  left: 309px;
+  .ProfileBox {
+    position: relative;
+    width: 1558px;
+    height: 362px;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 1px solid #0000001a;
+  }
+  .ButtonGroup {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

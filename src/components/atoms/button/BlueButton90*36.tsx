@@ -7,7 +7,7 @@ type ButtonProps = {
 
 const BlueButton9036 = ({ buttonname }: ButtonProps) => {
   return (
-    <button className={styles.Bluebutton}>
+    <button type="submit" className={styles.Bluebutton}>
       <div className={styles.Bluebuttontext}>{buttonname}</div>
     </button>
   );
