@@ -7,12 +7,12 @@ export const getAllTasks = async (): Promise<Task[]> => {
   return Tasks;
 };
 
-export const CreateTask = async (
+export const createTask = async (
   title: string,
-  status: string,
+  status: boolean,
   content: string
 ): Promise<Task> => {
-  const currentDatetime = new Date().toDateString();
+  const currentDatetime = new Date().toISOString();
   const res = await fetch("http://localhost:3001/tasks", {
     method: "POST",
     headers: {

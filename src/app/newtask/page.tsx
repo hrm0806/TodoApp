@@ -4,28 +4,35 @@ import styles from "./newtaskpage.module.scss";
 import { TitleContainer } from "@/components/molecules/TitleContainer";
 import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
-import { create } from "domain";
-import { CreateTask } from "@/TaskAPI";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { createTask } from "@/TaskAPI";
 
 const CreateTaskPage = () => {
   const router = useRouter();
   const [title, setTitle] = useState<string>("");
-  const [status, setStatus] = useState<string>("");
+  const [status, setStatus] = useState<boolean>(false);
   const [content, setContent] = useState<string>("");
+
+  const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setStatus(e.target.value === "完了"); //完了の場合true、未完了の場合false
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await CreateTask(title, status, content);
-    router.push("/");
-    router.refresh();
+    try {
+      await createTask(title, status, content);
+      router.push("/");
+      router.refresh();
+    } catch (error) {
+      console.error("Task creation failed:", error);
+      // エラー処理をここに追加（例：ユーザーへの通知）
+    }
   };
 
   return (
     <div className={styles.Block}>
       <TitleContainer title="新規登録" />
-
       <form onSubmit={handleSubmit}>
         <div className={styles.main}>
           <div className={styles.Frame234}>
@@ -40,11 +47,15 @@ const CreateTaskPage = () => {
           </div>
           <div className={styles.Frame235}>
             <div className={styles.StatusTitle}>ステータス</div>
-            <input
-              type="text"
-              onChange={(e) => setStatus(e.target.value)}
+            <select
+              id="status"
+              value={status ? "完了" : "未完了"}
+              onChange={handleStatusChange}
               className={styles.selectStatus}
-            ></input>
+            >
+              <option value="未完了">未完了</option>
+              <option value="完了">完了</option>
+            </select>
           </div>
 
           <div className={styles.MainText}>
