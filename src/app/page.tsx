@@ -1,5 +1,7 @@
 import { TitleContainer } from "@/components/molecules/TitleContainer";
 import styles from "./pageHome.module.scss";
+import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
+import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
 
 export default function Home() {
   return (
@@ -12,13 +14,8 @@ export default function Home() {
             <div className={styles.searchboxin}>
               <input className={styles.searchinputtext}></input>
               <div className={styles.buttongroup}>
-                <button className={styles.searchbutton}>
-                  <div className={styles.searchbuttontext}>検索</div>
-                </button>
-
-                <button className={styles.resetbutton}>
-                  <div className={styles.resetbuttontext}>リセット</div>
-                </button>
+                <BlueButton9036 buttonname="検索" />
+                <DarkButton9036 buttonname="リセット" />
               </div>
             </div>
           </div>
