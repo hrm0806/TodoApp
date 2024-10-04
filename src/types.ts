@@ -5,3 +5,5 @@ export type Task = {
   content: string;
   createdAt: string;
 };
+
+export type Filter = "all" | "checked" | "unchecked";

@@ -1,0 +1,112 @@
+.Box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480px;
+  height: 585px;
+  top: 247px;
+  left: 720px;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0px 3px 14px 2px #0000001f;
+  box-shadow: 0px 8px 10px 1px #00000024;
+  box-shadow: 0px 5px 5px -3px #00000033;
+  padding: 40px 0px 0px 0px;
+  .Top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 100px;
+    .TopGroup {
+      width: 448px;
+      height: 52px;
+
+      .Title {
+        width: 448px;
+        height: 28px;
+
+        font-family: Noto Sans;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+      }
+      .TitleCotent {
+        width: 448px;
+        height: 24px;
+        font-family: Noto Sans;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: #00000099;
+      }
+    }
+  }
+  .SubTitle {
+    width: 448px;
+    height: 40px;
+    padding: 8.5px 0px 7.5px 0px;
+    .SubTitleText {
+      width: 448px;
+      height: 24px;
+      top: 8.5px;
+      font-family: Noto Sans;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+  .Input {
+    width: 448px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 0px 12px 0px 12px;
+    gap: 16px;
+    background-color: #ebeded;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .ButtonBox {
+    width: 480px;
+    height: 84px;
+    padding: 36px 16px 16px 16px;
+    gap: 16px;
+    .Button {
+      width: 448px;
+      height: 42px;
+      border-radius: 4px;
+      background: #17c6ed;
+      box-shadow: 0px 1px 5px 0px #0000001f;
+      box-shadow: 0px 2px 2px 0px #00000024;
+      box-shadow: 0px 3px 1px -2px #00000033;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ButtonText {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.46px;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+  }
+  .CancelButton {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #193238;
+  }
+}

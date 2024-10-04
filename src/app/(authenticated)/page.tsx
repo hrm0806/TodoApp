@@ -4,6 +4,10 @@ import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
 import { getAllTasks } from "@/TaskAPI";
 import { TaskCard } from "@/components/molecules/TaskCard";
+import { SelectBox } from "@/components/molecules/SelectBox";
+import { SelectButton } from "@/components/atoms/button/SelectButton";
+import { useState } from "react";
+import { Filter } from "@/types";
 
 export default async function Home() {
   const tasks = await getAllTasks();
@@ -24,7 +28,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.space}></div>
+        <SelectBox />
         <div className={styles.TaskListFrame}>
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} />
