@@ -10,14 +10,17 @@
     "json-server": "json-server --watch src/data/tasks.json --port 3001"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "json-server": "^1.0.0-beta.3",
     "next": "13.5.7",
+    "pg": "^8.13.0",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.79.4"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/pg": "^8.11.10",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",

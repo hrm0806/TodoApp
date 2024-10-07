@@ -3,6 +3,7 @@ import styles from "./pageProfile.module.scss";
 import { TitleContainer } from "@/components/molecules/TitleContainer";
 import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
+import Link from "next/link";
 
 const ProfilePage = () => {
   return (
@@ -15,9 +16,15 @@ const ProfilePage = () => {
         <p>akfjaldf@gmail.com</p>
       </div>
       <div className={styles.ButtonGroup}>
-        <BlueButton9036 buttonname="編集" />
-        <BlueButton9036 buttonname="パスワード変更" />
-        <DarkButton9036 buttonname="戻る" />
+        <Link href="/profile/edit">
+          <BlueButton9036 buttonname="編集" />
+        </Link>
+        <Link href="/profile/changepassword">
+          <BlueButton9036 buttonname="パスワード変更" />
+        </Link>
+        <Link href="/">
+          <DarkButton9036 buttonname="戻る" />
+        </Link>
       </div>
     </div>
   );

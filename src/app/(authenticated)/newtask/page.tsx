@@ -6,7 +6,6 @@ import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { createTask } from "@/TaskAPI";
 
 const CreateTaskPage = () => {
   const router = useRouter();
@@ -21,7 +20,15 @@ const CreateTaskPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await createTask(title, status, content);
+      const API_URL = process.env.NEXT_PUBLIC_API_URL;
+      await fetch(`${API_URL}/api/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ title, status, content }),
+      });
+
       router.push("/");
       router.refresh();
     } catch (error) {

@@ -5,3 +5,30 @@
   gap: 9px;
   display: flex;
 }
+.Button {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: #0000001f;
+  box-shadow: 0px 1px 5px 0px #0000001f;
+  box-shadow: 0px 2px 2px 0px #00000024;
+  box-shadow: 0px 3px 1px -2px #00000033;
+  padding: 6px 16px 6px 16px;
+  gap: 8px;
+  &:hover {
+    background-color: #00000033;
+  }
+  .ButtonText {
+    width: 120px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #000000;
+  }
+}

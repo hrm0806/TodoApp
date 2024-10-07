@@ -14,6 +14,19 @@ export const TaskCard = ({ task }: TaskProps) => {
     : styles.StatusNotFinished; //false 未完了の場合のスタイル
   const statusText = task.status ? "完了" : "未完了";
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleString("ja-JP", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZone: "Asia/Tokyo", // 日本時間で表示
+    });
+  };
+
   return (
     <div className={styles.TaskCard}>
       <div className={styles.Title}>{task.title}</div>
@@ -27,9 +40,7 @@ export const TaskCard = ({ task }: TaskProps) => {
         createdAt={task.createdAt}
       />
       {task.content}
-      <div className={styles.Date}>
-        {new Date(task.createdAt).toLocaleString()}
-      </div>
+      <div className={styles.Date}>{formatDate(task.createdAt)}</div>
       <div className={styles.DeleteButton}>
         <DeleteButton buttonname="削除" id={task.id} />
       </div>
