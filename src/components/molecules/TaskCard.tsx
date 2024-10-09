@@ -3,6 +3,8 @@ import styles from "./TaskCard.module.scss";
 import { Task } from "@/types";
 import DeleteButton from "../atoms/button/DeleteButton";
 import ChangeButton from "../atoms/button/ChangeButton";
+import BlueButton9036 from "../atoms/button/BlueButton90*36";
+import Link from "next/link";
 
 type TaskProps = {
   task: Task;
@@ -41,7 +43,12 @@ export const TaskCard = ({ task }: TaskProps) => {
       />
       {task.content}
       <div className={styles.Date}>{formatDate(task.createdAt)}</div>
-      <div className={styles.DeleteButton}>
+      <div className={styles.EditButtonArea}>
+        <Link href={`/detailtask/${task.id}`}>
+          <BlueButton9036 buttonname="詳細" />
+        </Link>
+      </div>
+      <div className={styles.DeleteButtonArea}>
         <DeleteButton buttonname="削除" id={task.id} />
       </div>
     </div>
