@@ -1,0 +1,135 @@
+.Block {
+  position: absolute;
+  width: 1558px;
+  height: 682px;
+  top: 100px;
+  left: 309px;
+
+  .main {
+    width: 1558px;
+    height: 580px;
+    gap: 10px;
+    background-color: antiquewhite;
+    padding: 20px;
+    gap: 16px;
+    border-radius: 4px;
+    border: 1px solid #0000001a;
+    background: #ffffff;
+
+    .Frame234 {
+      width: 1518px;
+      height: 84px;
+      padding: 0px 576px 0px 0px;
+
+      .TODOTitle {
+        width: 275px;
+        height: 37px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+        text-align: left;
+      }
+      .InputTitle {
+        width: 725 px;
+        height: 47px;
+        top: 37px;
+        border-radius: 5px;
+        background-color: #f1f4fa;
+        border: 0.5px solid #c5c7c9;
+      }
+    }
+    .Frame235 {
+      margin-top: 16px;
+      width: 1518px;
+      height: 84px;
+      padding: 0px 576px 0px 0px;
+
+      .StatusTitle {
+        width: 275px;
+        height: 37px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+        text-align: left;
+      }
+      .selectStatus {
+        width: 275px;
+        height: 47px;
+        top: 37px;
+        border-radius: 5px;
+        background-color: #f1f4fa;
+        border: 0.5px solid #c5c7c9;
+      }
+    }
+    .MainText {
+      margin-top: 16px;
+      width: 1518px;
+      height: 226px;
+      padding: 0px 576px 0px 0px;
+      .MainTextTitle {
+        width: 275px;
+        height: 37px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+        text-align: left;
+      }
+      .MainTextbox {
+        width: 730px;
+        height: 189px;
+        top: 37px;
+        border-radius: 5px;
+        background-color: #f1f4fa;
+        border: 0.5px solid #c5c7c9;
+      }
+    }
+  }
+  .BackBox {
+    width: 61px;
+    height: 72px;
+    padding: 36px 0px 0px 0px;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    .BackButton {
+      width: 61px;
+      height: 36px;
+      border-radius: 4px;
+      background: #0000001f;
+      box-shadow: 0px 1px 5px 0px #0000001f;
+      box-shadow: 0px 2px 2px 0px #00000024;
+      box-shadow: 0px 3px 1px -2px #00000033;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .BackButtonText {
+        width: 29px;
+        height: 24px;
+        gap: 0px;
+        opacity: 0px;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+  .RegisterBox {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    height: 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

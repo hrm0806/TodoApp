@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./detailtask.module.scss";
 import { TitleContainer } from "@/components/molecules/TitleContainer";
 import ChangeButton from "@/components/atoms/button/ChangeButton";
+import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
+import Link from "next/link";
 
 const DetailTaskPage = async ({ params }: { params: { id: string } }) => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -40,6 +42,9 @@ const DetailTaskPage = async ({ params }: { params: { id: string } }) => {
             <div className={styles.Todotext}>{task.content}</div>
           </div>
         </div>
+        <Link href={`/detailtask/${task.id}/edit`}>
+          <BlueButton9036 buttonname="編集" />
+        </Link>
       </div>
     </div>
   );
