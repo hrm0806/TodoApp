@@ -33,6 +33,9 @@ export async function DELETE(req: NextRequest) {
   await db.client.connect();
   const { id } = await req.json();
 
+  console.log(id);
+  console.log("AAAA");
+
   const query = `
         DELETE FROM tasks WHERE id = $1
         RETURNING *

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./TaskCardList.module.scss";
 import { TaskCard } from "./TaskCard";
-import { getAllTasks } from "@/TaskAPI";
 import { Task } from "@/types";
 
 export const TaskCardList = async () => {

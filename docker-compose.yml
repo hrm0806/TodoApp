@@ -11,6 +11,7 @@ services:
       - db
     environment:
       - NODE_ENV=development
+      # - NEXT_PUBLIC_API_URL=http://app:3000 CORSエラーが出るためコメントアウト
       - NEXT_PUBLIC_API_URL=http://localhost:3000
       - DB_USER=postgres_training
       - DB_HOST=db
@@ -20,6 +21,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    networks:
+      - app-network
 
   db:
     image: postgres:15
@@ -31,8 +34,16 @@ services:
       POSTGRES_DB: postgres_training
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
     ports:
       - "5432:5432"
+    networks:
+      - app-network
 
 volumes:
   postgres_data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -8,11 +8,11 @@ export class DBClient {
     //コンストラクタを定義する
     this.client = new Client({
       //clientプロパティに新しいClientインスタンスを代入する
-      user: "postgres_training",
-      host: "localhost", //localhostに変更
-      database: "postgres_training",
-      password: "postgres_training",
-      port: 5432,
+      user: process.env.DB_USER,
+      host: process.env.DB_HOST,
+      database: process.env.DB_NAME,
+      password: process.env.DB_PASSWORD,
+      port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 5432,
     });
   }
 }

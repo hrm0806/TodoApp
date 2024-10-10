@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import styles from "./DeleteButton.module.scss";
-import { deleteTask } from "@/TaskAPI";
 import { useRouter } from "next/navigation";
 
 type ButtonProps = {
