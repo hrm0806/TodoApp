@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:3000 # APIルートを使用するため、同じURLを指定
+      - DB_USER=postgres_training
+      - DB_HOST=db
+      - DB_NAME=postgres_training
+      - DB_PASSWORD=postgres_training
+      - DB_PORT=5432
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres_training
+      POSTGRES_PASSWORD: postgres_training
+      POSTGRES_DB: postgres_training
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
