@@ -10,7 +10,7 @@ RUN npm install
 COPY . .
 
 # アプリケーションをビルド
-RUN npm run build
+#RUN npm run build
 
 # アプリケーションが使用するポートを指定
 EXPOSE 3000

@@ -21,7 +21,7 @@ const CreateTaskPage = () => {
     e.preventDefault();
     try {
       const API_URL = process.env.NEXT_PUBLIC_API_URL;
-      await fetch(`${API_URL}/api/`, {
+      await fetch(`/api/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
