@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./editpage.module.scss";
-import ChangeButton from "@/components/atoms/button/ChangeButton";
 import { TitleContainer } from "@/components/molecules/TitleContainer";
 import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
@@ -44,17 +43,17 @@ const EditTaskPage = ({ params }: { params: { id: string } }) => {
   if (!task) {
     return <div>読み込み中...</div>;
   }
-
+  //データの更新関数
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const API_URL = process.env.NEXT_PUBLIC_API_URL;
-      await fetch(`${API_URL}/api/`, {
-        method: "POST",
+      await fetch(`${API_URL}/api/${params.id}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, status, content }),
+        body: JSON.stringify({ title, content, status }),
       });
 
       router.push("/");
