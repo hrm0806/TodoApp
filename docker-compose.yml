@@ -11,7 +11,7 @@ services:
       - db
     environment:
       - NODE_ENV=development
-      - NEXT_PUBLIC_API_URL=http://localhost:3000 # APIルートを使用するため、同じURLを指定
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
       - DB_USER=postgres_training
       - DB_HOST=db
       - DB_NAME=postgres_training
@@ -29,8 +29,8 @@ services:
       POSTGRES_USER: postgres_training
       POSTGRES_PASSWORD: postgres_training
       POSTGRES_DB: postgres_training
-      volumes:
-        - postgres_data:/var/lib/postgresql/data
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
 
