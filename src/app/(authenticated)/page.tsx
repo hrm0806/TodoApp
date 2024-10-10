@@ -2,9 +2,6 @@ import { TitleContainer } from "@/components/molecules/TitleContainer";
 import styles from "./pageHome.module.scss";
 import BlueButton9036 from "@/components/atoms/button/BlueButton90*36";
 import DarkButton9036 from "@/components/atoms/button/DarkButton9036";
-import { SelectBox } from "@/components/molecules/SelectBox";
-import { useState } from "react";
-import { Filter } from "@/types";
 import { TaskCardList } from "@/components/molecules/TaskCardList";
 
 export default function Home() {

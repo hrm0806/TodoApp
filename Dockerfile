@@ -9,6 +9,7 @@ RUN npm install
 
 COPY . .
 
+COPY init.sql /docker-entrypoint-initdb.d/
 # アプリケーションをビルド
 #RUN npm run build
 
