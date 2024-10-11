@@ -3,7 +3,7 @@ export type Task = {
   title: string;
   status: boolean;
   content: string;
-  createdAt: string;
+  created_at: string;
 };
 
 export type Filter = "all" | "checked" | "unchecked";
