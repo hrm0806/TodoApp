@@ -62,12 +62,23 @@
       }
     }
   }
-  .Select {
+  .Count {
     width: 1558px;
     height: 73px;
     padding: 24px 7px 0px 0px;
     gap: 9px;
     display: flex;
+    .CountText {
+      width: 87px;
+      height: 18px;
+      padding-top: 20px;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      text-align: center;
+    }
   }
 }
 
